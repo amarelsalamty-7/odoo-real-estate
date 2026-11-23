@@ -29,7 +29,7 @@ Python 3.10+ · Odoo 17 (Community) · PostgreSQL · XML views · QWeb · OWL (J
 ## Installation
 
 ```bash
-git clone https://github.com/<your-username>/odoo-real-estate.git
+git clone https://github.com/amarelsalamty-7/odoo-real-estate.git)
 # add the cloned folder to your Odoo addons path, then:
 ./odoo-bin -d mydb -i real_estate --addons-path=addons,/path/to/odoo-real-estate
 ```
