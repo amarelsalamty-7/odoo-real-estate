@@ -1,4 +1,5 @@
 # Odoo Real Estate Management
+![CI](https://github.com/amarelsalamty-7/odoo-real-estate/actions/workflows/ci.yml/badge.svg)
 
 An Odoo 17 application for managing a real-estate portfolio: properties, owners, buildings and the
 sale workflow of each property — from first listing to closing — with a full audit trail.
