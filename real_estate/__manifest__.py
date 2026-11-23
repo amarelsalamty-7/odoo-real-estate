@@ -12,7 +12,7 @@ Real Estate Management
 * Link between sale orders / partners and properties
     """,
     "author": "Ammar Elsalamty",
-    "website": "https://github.com/<your-username>/odoo-real-estate",
+    "website": "https://github.com/amarelsalamty-7/odoo-real-estate",
     "category": "Real Estate",
     "version": "17.0.1.0.0",
     "license": "LGPL-3",
