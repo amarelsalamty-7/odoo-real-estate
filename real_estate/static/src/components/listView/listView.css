@@ -1,0 +1,83 @@
+/* ===========================
+   Container
+=========================== */
+
+.real-estate-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.real-estate-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #34495e;
+}
+
+/* ===========================
+   Table Wrapper
+=========================== */
+
+.real-estate-table-wrapper {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* ===========================
+   Table Style
+=========================== */
+
+.real-estate-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+/* Header */
+
+.real-estate-table thead {
+    background-color: #714B67; /* Odoo color */
+    color: white;
+}
+
+.real-estate-table th {
+    padding: 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+/* Body */
+
+.real-estate-table td {
+    padding: 10px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Zebra Rows */
+
+.real-estate-table tbody tr:nth-child(even) {
+    background-color: #f4f6f8;
+}
+
+/* Hover Effect */
+
+.real-estate-table tbody tr:hover {
+    background-color: #eef2ff;
+    transition: 0.2s;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 768px) {
+    .real-estate-table {
+        font-size: 12px;
+    }
+}

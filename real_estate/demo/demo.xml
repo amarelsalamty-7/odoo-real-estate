@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="demo_owner_1" model="owner">
+        <field name="name">Ahmed Hassan</field>
+        <field name="phone">+20 100 000 0001</field>
+        <field name="address">Mansoura, Dakahlia</field>
+    </record>
+    <record id="demo_owner_2" model="owner">
+        <field name="name">Sara Ali</field>
+        <field name="phone">+20 100 000 0002</field>
+        <field name="address">Cairo</field>
+    </record>
+
+    <record id="demo_tag_new" model="tag"><field name="name">New</field></record>
+    <record id="demo_tag_sea" model="tag"><field name="name">Sea view</field></record>
+
+    <record id="demo_property_1" model="property">
+        <field name="name">Villa Nile</field>
+        <field name="description">Spacious villa with a private garden.</field>
+        <field name="postcode">35511</field>
+        <field name="bedrooms">5</field>
+        <field name="expected_price">4500000</field>
+        <field name="garden" eval="True"/>
+        <field name="garden_area">250</field>
+        <field name="garden_orientation">south</field>
+        <field name="date_availability" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+        <field name="owner_id" ref="demo_owner_1"/>
+        <field name="tag_ids" eval="[(6, 0, [ref('demo_tag_new')])]"/>
+    </record>
+    <record id="demo_property_2" model="property">
+        <field name="name">Sea Flat 12</field>
+        <field name="description">Two floors apartment close to the beach.</field>
+        <field name="postcode">11511</field>
+        <field name="bedrooms">3</field>
+        <field name="expected_price">1800000</field>
+        <field name="garage" eval="True"/>
+        <field name="date_availability" eval="DateTime.today().strftime('%Y-%m-%d')"/>
+        <field name="expected_selling_date" eval="(DateTime.today() - relativedelta(days=10)).strftime('%Y-%m-%d')"/>
+        <field name="owner_id" ref="demo_owner_2"/>
+        <field name="tag_ids" eval="[(6, 0, [ref('demo_tag_sea')])]"/>
+    </record>
+</odoo>

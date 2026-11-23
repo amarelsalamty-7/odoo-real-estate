@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="real_estate.ListView">
+        <div class="real-estate-container">
+            <h1 class="real-estate-title">Properties List</h1>
+            <button class="btn btn-primary m-1" t-on-click="createRecord">Create record</button>
+            <button class="btn btn-secondary m-1" t-on-click="loadRecords">Refresh</button>
+
+            <div class="real-estate-table-wrapper">
+                <table class="real-estate-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Postcode</th>
+                            <th>Date Availability</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-if="!state.loading and !state.records.length">
+                            <td colspan="5" class="text-muted text-center">No properties yet.</td>
+                        </tr>
+                        <t t-foreach="state.records" t-as="record" t-key="record.id">
+                            <tr>
+                                <td><t t-esc="record.name"/></td>
+                                <td><t t-esc="record.postcode"/></td>
+                                <td><t t-esc="record.date_availability"/></td>
+                                <td><t t-esc="record.state"/></td>
+                                <td>
+                                    <button class="btn btn-danger btn-sm"
+                                            t-on-click="() => this.deleteRecord(record.id)">Delete</button>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </t>
+
+</templates>

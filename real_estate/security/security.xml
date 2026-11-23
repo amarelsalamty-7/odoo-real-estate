@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="property_category" model="ir.module.category">
+        <field name="name">Real Estate</field>
+        <field name="sequence">30</field>
+    </record>
+
+    <record id="property_user_group" model="res.groups">
+        <field name="name">Property User</field>
+        <field name="category_id" ref="real_estate.property_category"/>
+    </record>
+
+    <record id="property_group_manager" model="res.groups">
+        <field name="name">Property Manager</field>
+        <field name="category_id" ref="real_estate.property_category"/>
+        <field name="implied_ids" eval="[(4, ref('real_estate.property_user_group'))]"/>
+    </record>
+
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('real_estate.property_group_manager'))]"/>
+    </record>
+</odoo>
